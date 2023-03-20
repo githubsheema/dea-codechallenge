@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,6 +37,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(tags = {
 		"ipv4 Manager" }, description = "The RestController used for managing ipv4 Blocks.", produces = "JSON representation of IPv4's status information")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @Validated
 public class IPv4AMController {
